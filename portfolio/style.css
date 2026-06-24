@@ -81,6 +81,30 @@ header {
     gap: 1rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.logo-img {
+    width: 42px;
+    height: 42px;
+    display: block;
+    filter: drop-shadow(0 0 12px rgba(82, 184, 255, 0.4));
+    transition: filter 0.3s ease;
+}
+
+.logo:hover .logo-img {
+    filter: drop-shadow(0 0 20px rgba(82, 184, 255, 0.7));
+}
+
 .logo span {
     color: #7cc7ff;
     font-weight: 900;

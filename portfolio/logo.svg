@@ -1,0 +1,54 @@
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
+      }
+      .logo-border { animation: rotate 20s linear infinite; }
+      .logo-inner { animation: pulse 3s ease-in-out infinite; }
+    </style>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#52b8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06a0ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7cc7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#52b8ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer rotating ring -->
+  <g class="logo-border">
+    <circle cx="60" cy="60" r="58" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" opacity="0.4"/>
+    <circle cx="60" cy="60" r="52" fill="none" stroke="url(#blueGrad)" stroke-width="0.8" opacity="0.2"/>
+  </g>
+
+  <!-- Middle pulsing ring -->
+  <circle cx="60" cy="60" r="48" fill="none" stroke="url(#purpleGrad)" stroke-width="2" opacity="0.6" class="logo-inner"/>
+
+  <!-- Central hexagon (tech symbol) -->
+  <g class="logo-inner">
+    <polygon points="60,28 85,39 85,61 60,72 35,61 35,39" fill="none" stroke="url(#blueGrad)" stroke-width="2" opacity="0.8"/>
+  </g>
+
+  <!-- Inner geometric shapes -->
+  <g opacity="0.9">
+    <!-- S shape inspired by hex -->
+    <path d="M 50 50 Q 55 45 60 50 Q 65 55 60 60" fill="none" stroke="url(#purpleGrad)" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- M shape -->
+    <path d="M 65 50 L 68 58 L 71 50 L 74 58" fill="none" stroke="url(#blueGrad)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Core tech dot -->
+  <circle cx="60" cy="60" r="3" fill="url(#purpleGrad)" opacity="0.9"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="85" cy="60" r="2" fill="url(#blueGrad)" opacity="0.6"/>
+  <circle cx="35" cy="60" r="2" fill="url(#purpleGrad)" opacity="0.6"/>
+  <circle cx="60" cy="28" r="2" fill="url(#blueGrad)" opacity="0.6"/>
+</svg>
